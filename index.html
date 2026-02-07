@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apollo Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header>
+        <h1>Apollo Clicker</h1>
+        <p class="subtitle">Click Apollo. Buy upgrades. Grow your seed empire.</p>
+      </header>
+
+      <section class="stats" aria-live="polite">
+        <p><strong>Seeds:</strong> <span id="seeds">0</span></p>
+        <p><strong>Seeds / click:</strong> <span id="spc">1</span></p>
+        <p><strong>Seeds / second:</strong> <span id="sps">0</span></p>
+      </section>
+
+      <section class="play-area">
+        <button id="apollo-button" aria-label="Click Apollo for seeds">
+          <img id="apollo-image" src="assets/apollo.svg" alt="Apollo the parrot" />
+        </button>
+      </section>
+
+      <section>
+        <h2>Upgrades</h2>
+        <div id="shop" class="shop"></div>
+      </section>
+
+      <button id="reset" class="reset">Reset save</button>
+    </main>
+
+    <template id="upgrade-template">
+      <button class="upgrade">
+        <div>
+          <strong class="name"></strong>
+          <p class="description"></p>
+        </div>
+        <div class="meta">
+          <span>Owned: <span class="owned">0</span></span>
+          <span>Cost: <span class="cost">0</span></span>
+        </div>
+      </button>
+    </template>
+
+    <script src="game.js" defer></script>
+  </body>
+</html>
